@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCF - Think Forward</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url('./backgroynd.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .connect-wallet {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        main {
+            padding: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .get-started {
+            background: #FF6B2C;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.3s;
+        }
+
+        .get-started:hover {
+            background: #ff824d;
+        }
+
+        .coins-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        .coin {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            animation: slideUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(100px);
+        }
+
+        .coin:nth-child(1) { top: 20%; left: 10%; animation-delay: 0.2s; }
+        .coin:nth-child(2) { top: 10%; left: 40%; animation-delay: 0.4s; }
+        .coin:nth-child(3) { top: 30%; left: 60%; animation-delay: 0.6s; }
+        .coin:nth-child(4) { top: 50%; left: 20%; animation-delay: 0.8s; }
+        .coin:nth-child(5) { top: 60%; left: 50%; animation-delay: 1s; }
+        .coin:nth-child(6) { top: 40%; left: 70%; animation-delay: 1.2s; }
+        .coin:nth-child(7) { top: 70%; left: 40%; animation-delay: 1.4s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LCF</div>
+        <div class="nav-links">
+            <a href="#">Market</a>
+            <a href="#">Exchange</a>
+            <a href="#">Community</a>
+            <a href="#">Login</a>
+            <a href="#" class="connect-wallet">Connect Wallet</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content">
+            <h1>Think<br>Forward</h1>
+            <p class="subtitle">Welcome to the world of crypto<br>trade collectibles.</p>
+            <button class="get-started">
+                Get Started
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="coins-container">
+            <img src="./Icon1.png" alt="Crypto Coin 1" class="coin">
+            <img src="./icon3.png" alt="Crypto Coin 2" class="coin">
+            <img src="./icon4.png" alt="Crypto Coin 3" class="coin">
+            <img src="./Icon1.png" alt="Crypto Coin 4" class="coin">
+            <img src="./icon3.png" alt="Crypto Coin 5" class="coin">
+            <img src="./icon4.png" alt="Crypto Coin 6" class="coin">
+            <img src="./Icon1.png" alt="Crypto Coin 7" class="coin">
+        </div>
+    </main>
+</body>
+</html>
